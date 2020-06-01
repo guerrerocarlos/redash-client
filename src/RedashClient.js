@@ -115,8 +115,8 @@ class RedashClient {
    * @param {{data_source_id: number, max_age: number, query: string, query_id: number}} query
    * @return {Promise<{job: Job}|{query_result: QueryResult}>}
    */
-  postQueryResult(query) {
-    return this.post_('api/query_results', query);
+  postQueryResults(query) {
+    return this.get_(`api/queries/${id}/results`);
   }
 
   /**
